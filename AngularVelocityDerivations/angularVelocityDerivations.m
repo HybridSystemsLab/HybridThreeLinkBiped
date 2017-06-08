@@ -1,0 +1,3 @@
+plantedLegLatexDerivation
+swingLegLatexDerivation
+torsoAngularVelocityDerivation

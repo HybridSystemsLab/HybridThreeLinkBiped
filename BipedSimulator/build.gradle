@@ -1,0 +1,42 @@
+apply plugin: 'java-library'
+
+repositories {
+    jcenter()
+  	maven { url "https://jitpack.io" }
+}
+
+ configurations.all {
+    // Check for updates every build
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+} 
+ 
+
+dependencies {
+ 
+  compile "com.github.HybridSystemsEnvironment:HybridSystemsEnvironment:-SNAPSHOT"
+  compile "com.github.HybridSystemsEnvironment:ThreeLinkBipedLib:-SNAPSHOT"
+   
+}
+
+jar {
+
+    archiveName = "BipedSimulatorExample.jar"
+
+    from {
+
+        configurations.runtime.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+
+        configurations.compile.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+
+    manifest {
+        attributes 'Main-Class': 'sim.BipedSimulatorExample'
+
+    }
+
+    exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA, log4j.properties'
+}

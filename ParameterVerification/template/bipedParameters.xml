@@ -1,0 +1,12 @@
+<edu.ucsc.hsl.hse.model.biped.threelink.parameters.BipedParameters>
+  <gravity>9.81</gravity>
+  <hipMass>1.0</hipMass>
+  <legLength>1.0</legLength>
+  <legMass>1.0</legMass>
+  <stepAngle>0.5</stepAngle>
+  <torsoAngle>0.1</torsoAngle>
+  <torsoLength>1.0</torsoLength>
+  <torsoMass>-1.0</torsoMass>
+  <useProperTorqueRelationship>false</useProperTorqueRelationship>
+  <walkSpeed>0.3</walkSpeed>
+</edu.ucsc.hsl.hse.model.biped.threelink.parameters.BipedParameters>

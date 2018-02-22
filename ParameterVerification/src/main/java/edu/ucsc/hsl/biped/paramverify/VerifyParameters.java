@@ -27,10 +27,10 @@ public class VerifyParameters
 		{
 			for (String arg : args)
 			{
-				if (args[0].equals("-new"))
+				if (arg.equals("-new"))
 				{
 					createNewParameterFile();
-				} else if (args[0].equals("-check"))
+				} else if (arg.equals("-check"))
 				{
 					checkParameterFile();
 				}
@@ -40,21 +40,32 @@ public class VerifyParameters
 
 	public static void createNewParameterFile()
 	{
-		File location = FileBrowser.save();
-		BipedParameters params = new BipedParameters();
-		if (!location.getName().contains(".xml"))
+		try
 		{
-			location = new File(location.getPath() + ".xml");
+			File location = FileBrowser.save();
+			BipedParameters params = new BipedParameters();
+			if (!location.getName().contains(".xml"))
+			{
+				location = new File(location.getPath() + ".xml");
+			}
+			FileSystemInteractor.createOutputFile(location, XMLParser.serializeObject(params));
+		} catch (Exception badFile)
+		{
+			System.out.println("unable to create new parameter file");
 		}
-		FileSystemInteractor.createOutputFile(location, XMLParser.serializeObject(params));
-
 	}
 
 	public static void checkParameterFile()
 	{
-		File location = FileBrowser.load();
-		BipedParameters params = (BipedParameters) XMLParser.getObject(location);
-		ParameterEvaluator.validParameters(params);
-
+		File location = null;
+		try
+		{
+			location = FileBrowser.load();
+			BipedParameters params = (BipedParameters) XMLParser.getObject(location);
+			ParameterEvaluator.validParameters(params);
+		} catch (Exception badFile)
+		{
+			System.out.println("unable to check validity of parameter file " + location);
+		}
 	}
 }

@@ -1,0 +1,45 @@
+<edu.ucsc.cross.hse.core.file.CollectionFile>
+  <fileContents>
+    <entry>
+      <java-class>biped.app.ConfigurationLoader</java-class>
+      <list>
+        <biped.app.ConfigurationLoader>
+          <console>
+            <printDebug>false</printDebug>
+            <printError>true</printError>
+            <printInfo>true</printInfo>
+            <printIntegratorExceptions>false</printIntegratorExceptions>
+            <printLogToFile>true</printLogToFile>
+            <printProgressIncrement>10</printProgressIncrement>
+            <printStatusInterval>5.0</printStatusInterval>
+            <printWarning>true</printWarning>
+            <terminateAtInput>true</terminateAtInput>
+          </console>
+          <environment>
+            <dataPointInterval>0.05</dataPointInterval>
+            <domainPriority>JUMP</domainPriority>
+            <eventHandlerConvergenceThreshold>1.0E-9</eventHandlerConvergenceThreshold>
+            <eventHandlerMaximumCheckInterval>0.001</eventHandlerMaximumCheckInterval>
+            <integrator class="edu.ucsc.cross.hse.core.integrator.DormandPrince853IntegratorFactory">
+              <odeMaximumStepSize>0.001</odeMaximumStepSize>
+              <odeMinimumStepSize>1.0E-9</odeMinimumStepSize>
+              <odeRelativeTolerance>1.0E-6</odeRelativeTolerance>
+              <odeSolverAbsoluteTolerance>1.0E-6</odeSolverAbsoluteTolerance>
+            </integrator>
+            <maxEventHandlerIterations>100</maxEventHandlerIterations>
+            <maximumJumps>200</maximumJumps>
+            <maximumTime>20.0</maximumTime>
+            <storeNonPrimativeData>false</storeNonPrimativeData>
+            <zeroThreshold>1.0E-9</zeroThreshold>
+          </environment>
+        </biped.app.ConfigurationLoader>
+      </list>
+    </entry>
+    <entry>
+      <java-class>java.lang.Boolean</java-class>
+      <list>
+        <boolean>false</boolean>
+      </list>
+    </entry>
+  </fileContents>
+</edu.ucsc.cross.hse.core.file.CollectionFile>

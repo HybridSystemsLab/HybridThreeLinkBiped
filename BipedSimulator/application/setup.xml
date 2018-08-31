@@ -1,0 +1,15 @@
+<edu.ucsc.cross.hse.core.file.CollectionFile>
+  <fileContents>
+    <entry>
+      <java-class>biped.app.HSEApplication</java-class>
+      <list>
+        <biped.app.HSEApplication>
+          <systemLoader>application/config/default/systemLoader.xml</systemLoader>
+          <configurationLoader>application/config/default/configLoader.xml</configurationLoader>
+          <saveResults>true</saveResults>
+          <saveFiguresWithBrowser>false</saveFiguresWithBrowser>
+        </biped.app.HSEApplication>
+      </list>
+    </entry>
+  </fileContents>
+</edu.ucsc.cross.hse.core.file.CollectionFile>

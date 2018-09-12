@@ -1,0 +1,10 @@
+<edu.ucsc.cross.jheq.core.app.JavaHyEQConfiguration>
+  <defaultEnvironmentSettingPath>settings/environmentSettings.xml</defaultEnvironmentSettingPath>
+  <defaultConsoleSettingPath>settings/consoleSettings.xml</defaultConsoleSettingPath>
+  <featurePathVisibility>
+    <entry>
+      <string>application</string>
+      <boolean>true</boolean>
+    </entry>
+  </featurePathVisibility>
+</edu.ucsc.cross.jheq.core.app.JavaHyEQConfiguration>

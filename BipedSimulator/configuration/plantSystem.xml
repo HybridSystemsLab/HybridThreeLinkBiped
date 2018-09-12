@@ -1,0 +1,117 @@
+<edu.ucsc.cross.jheq.core.app.SystemGenerator>
+  <stateGen>
+    <baseStructureClass>biped.data.BipedState</baseStructureClass>
+    <variableMap>
+      <entry>
+        <string>system</string>
+        <edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+          <value class="biped.data.BipedSystem">PLANT</value>
+        </edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+      </entry>
+      <entry>
+        <string>plantedLegAngle</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>-0.2</max>
+          <min>-0.2</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+      <entry>
+        <string>swingLegVelocity</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.0</max>
+          <min>0.0</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+      <entry>
+        <string>torsoAngle</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.2</max>
+          <min>0.2</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+      <entry>
+        <string>plantedLegVelocity</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.0</max>
+          <min>0.0</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+      <entry>
+        <string>torsoVelocity</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.0</max>
+          <min>0.0</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+      <entry>
+        <string>swingLegAngle</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.2</max>
+          <min>0.2</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+    </variableMap>
+    <filePathToLoadFrom>null</filePathToLoadFrom>
+    <objectName>Plant</objectName>
+  </stateGen>
+  <paramGen>
+    <edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+      <baseStructureClass>biped.control.PlantFlowController</baseStructureClass>
+      <variableMap/>
+      <filePathToLoadFrom>null</filePathToLoadFrom>
+    </edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+    <edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+      <baseStructureClass>biped.control.PlantFlowControlParameters</baseStructureClass>
+      <variableMap>
+        <entry>
+          <string>kTwo</string>
+          <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+            <max>100.0</max>
+            <min>100.0</min>
+          </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+        </entry>
+        <entry>
+          <string>constrainInput</string>
+          <edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+            <value class="boolean">false</value>
+          </edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+        </entry>
+        <entry>
+          <string>kOne</string>
+          <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+            <max>2000.0</max>
+            <min>2000.0</min>
+          </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+        </entry>
+        <entry>
+          <string>constraint</string>
+          <edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+            <value class="map">
+              <entry>
+                <biped.data.BipedLimb>TORSO</biped.data.BipedLimb>
+                <double>1000.0</double>
+              </entry>
+              <entry>
+                <biped.data.BipedLimb>PLANTED_LEG</biped.data.BipedLimb>
+                <double>10000.0</double>
+              </entry>
+              <entry>
+                <biped.data.BipedLimb>SWING_LEG</biped.data.BipedLimb>
+                <double>10000.0</double>
+              </entry>
+            </value>
+          </edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+        </entry>
+      </variableMap>
+      <filePathToLoadFrom>null</filePathToLoadFrom>
+    </edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+  </paramGen>
+  <sharedParams>
+    <string>bipedParameters</string>
+  </sharedParams>
+  <flowMap class="biped.hybridsystem.plant.Fpl"/>
+  <jumpMap class="biped.hybridsystem.plant.Gpl"/>
+  <flowSet class="biped.hybridsystem.plant.Cpl"/>
+  <jumpSet class="biped.hybridsystem.plant.DplPerturbed"/>
+  <input class="biped.data.BipedInput"/>
+</edu.ucsc.cross.jheq.core.app.SystemGenerator>

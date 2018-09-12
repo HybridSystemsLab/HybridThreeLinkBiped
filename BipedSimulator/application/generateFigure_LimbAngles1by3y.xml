@@ -1,0 +1,35 @@
+<edu.ucsc.cross.jheq.core.app.FigureConstructor>
+  <width>1200</width>
+  <height>400</height>
+   <content>
+    <edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <yAxisVariable>plantedLegAngle</yAxisVariable>
+        <mainTitle>Planted Angle</mainTitle> 
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <yAxisVariable>swingLegAngle</yAxisVariable>
+          <mainTitle>Swing Angle</mainTitle> 
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <yAxisVariable>torsoAngle</yAxisVariable>
+          <mainTitle>Torso Angle</mainTitle> 
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+    </edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+  </content>
+  <displayInWindow>true</displayInWindow>
+  <promptForExportLocation>true</promptForExportLocation>
+  <promptForExportFormat>true</promptForExportFormat>
+  <filePath>null</filePath>
+  <fileFormat>PDF</fileFormat>
+  <rendererFilePath>resources/chartRendererConfiguration.xml</rendererFilePath>
+</edu.ucsc.cross.jheq.core.app.FigureConstructor>

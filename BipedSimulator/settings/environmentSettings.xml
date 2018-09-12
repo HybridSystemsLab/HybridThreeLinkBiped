@@ -1,0 +1,19 @@
+<edu.ucsc.cross.jheq.core.environment.EnvironmentSettings>
+  <dataPointInterval>0.05</dataPointInterval>
+  <domainPriority>JUMP</domainPriority>
+  <eventHandlerConvergenceThreshold>1.0E-5</eventHandlerConvergenceThreshold>
+  <eventHandlerMaximumCheckInterval>0.0001</eventHandlerMaximumCheckInterval>
+  <integrator class="edu.ucsc.cross.jheq.core.integrator.VariableIntegratorFactory">
+    <integratorType>DORMAND_PRINCE_853</integratorType>
+    <odeMaximumStepSize>0.001</odeMaximumStepSize>
+    <odeMinimumStepSize>1.0E-9</odeMinimumStepSize>
+    <odeFixedStepSize>0.001</odeFixedStepSize>
+    <odeRelativeTolerance>1.0E-6</odeRelativeTolerance>
+    <odeSolverAbsoluteTolerance>1.0E-6</odeSolverAbsoluteTolerance>
+  </integrator>
+  <maxEventHandlerIterations>100</maxEventHandlerIterations>
+  <maximumJumps>40</maximumJumps>
+  <maximumTime>10.0</maximumTime>
+  <storeNonPrimativeData>false</storeNonPrimativeData>
+  <zeroThreshold>0.001</zeroThreshold>
+</edu.ucsc.cross.jheq.core.environment.EnvironmentSettings>

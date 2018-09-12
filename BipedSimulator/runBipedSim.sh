@@ -1,0 +1,1 @@
+java -jar ../Code/Java/ThreeLinkBiped/build/libs/ThreeLinkBipedSimulator.jar

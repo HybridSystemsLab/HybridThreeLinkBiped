@@ -1,0 +1,45 @@
+<edu.ucsc.cross.jheq.core.app.SystemGenerator>
+  <stateGen>
+    <baseStructureClass>biped.hybridsystem.perturbed.PerturbedState</baseStructureClass>
+    <variableMap>
+      <entry>
+        <string>perturbationAngle</string>
+        <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+          <max>0.0</max>
+          <min>0.0</min>
+        </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+      </entry>
+    </variableMap>
+    <filePathToLoadFrom>null</filePathToLoadFrom>
+  </stateGen>
+  <paramGen>
+    <edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+      <baseStructureClass>biped.hybridsystem.perturbed.PerturbationParameters</baseStructureClass>
+      <variableMap>
+        <entry>
+          <string>perturbationPercent</string>
+          <edu.ucsc.cross.jheq.core.variable.RandomVariable>
+            <max>0.0</max>
+            <min>0.0</min>
+          </edu.ucsc.cross.jheq.core.variable.RandomVariable>
+        </entry>
+        <entry>
+          <string>randomize</string>
+          <edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+            <value class="boolean">true</value>
+          </edu.ucsc.cross.jheq.core.variable.ClonableVariable>
+        </entry>
+      </variableMap>
+          <objectName>Perturbation</objectName>
+      <filePathToLoadFrom>null</filePathToLoadFrom>
+    </edu.ucsc.cross.jheq.core.app.ObjectGenerator>
+  </paramGen>
+  <sharedParams>
+    <string>bipedParameters</string>
+  </sharedParams>
+  <flowMap class="biped.hybridsystem.perturbed.Fp"/>
+  <jumpMap class="biped.hybridsystem.perturbed.Gp"/>
+  <flowSet class="biped.hybridsystem.perturbed.Cp"/>
+  <jumpSet class="biped.hybridsystem.perturbed.Dp"/>
+  <input class="biped.data.BipedInput"/>
+</edu.ucsc.cross.jheq.core.app.SystemGenerator>

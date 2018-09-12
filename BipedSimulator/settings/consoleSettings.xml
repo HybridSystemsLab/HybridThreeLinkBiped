@@ -1,0 +1,11 @@
+<edu.ucsc.cross.jheq.core.logging.ConsoleSettings>
+  <printDebug>false</printDebug>
+  <printError>true</printError>
+  <printInfo>true</printInfo>
+  <printIntegratorExceptions>false</printIntegratorExceptions>
+  <printLogToFile>true</printLogToFile>
+  <printProgressIncrement>10</printProgressIncrement>
+  <printStatusInterval>5.0</printStatusInterval>
+  <printWarning>true</printWarning>
+  <terminateAtInput>true</terminateAtInput>
+</edu.ucsc.cross.jheq.core.logging.ConsoleSettings>

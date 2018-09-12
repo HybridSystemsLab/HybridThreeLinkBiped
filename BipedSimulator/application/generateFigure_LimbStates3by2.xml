@@ -1,0 +1,60 @@
+<edu.ucsc.cross.jheq.core.app.FigureConstructor>
+  <width>1000</width>
+  <height>1200</height>
+  <content>
+    <edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <yAxisVariable>plantedLegAngle</yAxisVariable>
+        <mainTitle>Planted Leg Angle</mainTitle>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <mainTitle>Planted Leg Velocity</mainTitle>
+        <yAxisVariable>plantedLegVelocity</yAxisVariable>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+    </edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+    <edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <mainTitle>Swing Leg Angle</mainTitle>
+        <yAxisVariable>swingLegAngle</yAxisVariable>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+    </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+    <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <mainTitle>Swing Leg Velocity</mainTitle>
+        <yAxisVariable>swingLegVelocity</yAxisVariable>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+    </edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+    <edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <yAxisVariable>torsoAngle</yAxisVariable>
+         <mainTitle>Torso Angle</mainTitle>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+      <edu.ucsc.cross.jheq.core.app.ChartConstructor>
+        <xAxisVariable>Time</xAxisVariable>
+        <mainTitle>Torso Velocity</mainTitle>
+        <yAxisVariable>torsoVelocity</yAxisVariable>
+        <displayLegend>false</displayLegend>
+        <type>LINE</type>
+      </edu.ucsc.cross.jheq.core.app.ChartConstructor>
+    </edu.ucsc.cross.jheq.core.app.ApplicationFeature-array>
+  </content>
+  <displayInWindow>true</displayInWindow>
+  <promptForExportLocation>true</promptForExportLocation>
+  <promptForExportFormat>true</promptForExportFormat>
+  <filePath>null</filePath>
+  <fileFormat>PDF</fileFormat>
+   <rendererFilePath>resources/chartRendererConfiguration.xml</rendererFilePath>
+</edu.ucsc.cross.jheq.core.app.FigureConstructor>

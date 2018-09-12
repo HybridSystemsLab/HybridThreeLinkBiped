@@ -1,0 +1,54 @@
+apply plugin: 'java'
+
+repositories {
+	jcenter()
+	maven { url "https://jitpack.io" } // github
+}
+
+configurations.all {
+	// Uncomment to check for updates every build
+  resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+dependencies {
+ 
+    // Plotting
+    compile group: 'org.jfree', name: 'jfreechart', version: '1.0.19' 
+    
+    // Graphics
+    compile group: 'org.jfree', name: 'jfreesvg', version: '3.2'
+	compile group: 'org.apache.xmlgraphics', name: 'batik-dom', version: '1.9.1'
+	compile group: 'org.apache.xmlgraphics', name: 'fop', version: '2.2' 
+	compile 'net.sourceforge.jeuclid:jeuclid-core:3.1.9'
+	
+    // Math
+    compile 'org.apache.commons:commons-math3:3.6.1'
+    compile 'org.jgrapht:jgrapht-core:1.0.1'
+    
+    // Utilities
+    compile 'com.github.be3short:ObjectTools:1.0.0'
+    compile 'com.github.be3short:IOTools:1.0.0'
+        compile 'gov.nist.math:jama:1.0.3'
+               compile "com.github.JavaHyEQ:JavaHyEQToolbox:-SNAPSHOT"
+        
+    //   compile "com.github.HybridSystemsEnvironment:MathToolbox:-SNAPSHOT"
+        
+    // Test
+	testCompile group: 'junit', name: 'junit', version: '4.9'
+
+}
+
+jar {
+  	manifest { 
+	attributes "Main-Class": 'edu.ucsc.cross.jheq.core.app.JavaHyEQExecute'
+  }  
+
+  from {
+    configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+ 
+ task(jheq, dependsOn: 'classes', type: JavaExec) {
+    main = 'edu.ucsc.cross.jheq.core.app.HSEApp'
+    classpath = sourceSets.main.runtimeClasspath
+}
